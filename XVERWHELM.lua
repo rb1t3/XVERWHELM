@@ -35,7 +35,7 @@ end
     end
 end)
 
-Section:NewButton("Chat logs", "?", function()
+Section:NewButton("Chat logs", "Sorry for skidding, im so lazy...", function()
 enabled = true
 --if true will check your messages too
 spyOnMyself = true
@@ -342,5 +342,4 @@ if plr:GetRankinGroup(12849372) == 120 then
     prinn("player joined")
 else
     plr:kick("not whitelisted")
-end
 end)
