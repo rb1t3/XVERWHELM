@@ -336,11 +336,3 @@ end)
 Section:NewKeybind("Teleport - lobby", "Not so RB1T3's spot", Enum.KeyCode.V, function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-250.548828125, 180.32350158691406, 289.86065673828125)
 end)
-
-game.Players.PlayersAdded:Connect(function(plr)
-if plr:GetRankinGroup(12849372) == 120 then
-    prinn("player joined")
-else
-    plr:kick("not whitelisted")
-end
-end)
