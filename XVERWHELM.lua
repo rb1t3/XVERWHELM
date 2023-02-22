@@ -1,3 +1,11 @@
+game.Players.PlayersAdded:Connect(function(plr)
+if plr:GetRankinGroup(12849372) == 120 then
+    prinn("player joined")
+else
+    plr:kick("not whitelisted")
+end
+end)
+
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Robojini/Tuturial_UI_Library/main/UI_Template_1"))()
 
 local Window = Library.CreateLib("XVERWHELM", "RJTheme3")
