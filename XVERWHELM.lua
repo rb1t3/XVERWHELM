@@ -342,4 +342,5 @@ if plr:GetRankinGroup(12849372) == 120 then
     prinn("player joined")
 else
     plr:kick("not whitelisted")
+end
 end)
