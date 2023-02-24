@@ -488,7 +488,7 @@ end)
 
 game.Players.PlayersAdded:Connect(function(plr)
 if plr:GetRankinGroup(12849372) == 120 then
-    prinn("player joined")
+    print("player joined")
 else
     plr:kick("not whitelisted")
 end
