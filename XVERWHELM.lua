@@ -22,6 +22,11 @@ Section:NewSlider("Jump Power", "...", 500, 0, function(s)
 end)
 
 Section:NewButton("Remove Fall Damage", "Resets when you die", function()
+   game.StarterGui:SetCore("SendNotification", {
+    Title = "Remove Fall damage";
+    Text = "Resets when you die";
+    Duration = 5;
+}) 
     local falldamageScript = game:GetService("Players").LocalPlayer.Character:FindFirstChild("FallDamageScript")
 falldamageScript:remove()
 end)
@@ -226,21 +231,28 @@ local Tab = Window:NewTab("NDS")
 
 local Section = Tab:NewSection("Teleports")
 
-Section:NewButton("Teleport - Island", "RB1T3's spot", function()
+Section:NewButton("Teleport - Island", "Owner's spot", function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-150, 47.82349395751953, 2.3002567291259766) 
 end)
 
-Section:NewButton("Teleport - Leaderboard", "RB1T3's spot", function()
+Section:NewButton("Teleport - Leaderboard", "Owner's spot", function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-290.55047607421875, 195.3234405517578, 357.9002685546875) 
 end)
 
-Section:NewButton("Teleport - lobby inside", "Not so RB1T3's spot", function()
+Section:NewButton("Teleport - lobby inside", "Not so Owner's spot", function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-250.548828125, 180.32350158691406, 289.86065673828125)
 end)
 
 local Section = Tab:NewSection("OP things")
 
 Section:NewButton("blackhole (key - e)", "Please, use R6 for better working", function()
+  
+   game.StarterGui:SetCore("SendNotification", {
+    Title = "Edited Blackhole";
+    Text = "Use r6 for better work";
+    Duration = 5;
+}) 
+
 local UserInputService = game:GetService("UserInputService")
 local Mouse = game:GetService("Players").LocalPlayer:GetMouse()
 local Folder = Instance.new("Folder", game:GetService("Workspace"))
@@ -326,18 +338,20 @@ local Tab = Window:NewTab("KeyBinds")
 
 local Section = Tab:NewSection("Teleports")
 
-Section:NewKeybind("Teleport - Island", "RB1T3's spot", Enum.KeyCode.X, function()
+Section:NewKeybind("Teleport - Island", "Owner's spot", Enum.KeyCode.X, function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-150, 47.82349395751953, 2.3002567291259766)
 end)
 
-Section:NewKeybind("Teleport - Leaderboard", "RB1T3's spot", Enum.KeyCode.B, function()
+Section:NewKeybind("Teleport - Leaderboard", "Owner's spot", Enum.KeyCode.B, function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-290.55047607421875, 195.3234405517578, 357.9002685546875)
 end)
 
-Section:NewKeybind("Teleport - lobby", "Not so RB1T3's spot", Enum.KeyCode.V, function()
+Section:NewKeybind("Teleport - lobby", "Not so Owner's spot", Enum.KeyCode.V, function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-250.548828125, 180.32350158691406, 289.86065673828125)
 end)
 
+ local Section = Tab:NewSection("Fly")
+ 
 Section:NewKeybind("Fly", "zxc", Enum.KeyCode.G, function()
     _G.FLYING = false
 local LP = game:service('Players').LocalPlayer
@@ -347,7 +361,7 @@ local lCONTROL = {F = 0, B = 0, L = 0, R = 0}
 local SPEED = 5
 local MOUSE = LP:GetMouse()
  
- 
+
 local function FLY()
     _G.FLYING = true
     local BG = Instance.new('BodyGyro', T)
