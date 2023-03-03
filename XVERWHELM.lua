@@ -238,7 +238,7 @@ Section:NewButton("Teleport - lobby inside", "Not so RB1T3's spot", function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-250.548828125, 180.32350158691406, 289.86065673828125)
 end)
 
-local Section = Tab:NewSection("Blackhole")
+local Section = Tab:NewSection("OP things")
 
 Section:NewButton("blackhole (key - e)", "Please, use R6 for better working", function()
 local UserInputService = game:GetService("UserInputService")
@@ -311,6 +311,16 @@ spawn(function()
     end
 end)
 end)
+
+Section:NewButton("Remove portal door", "It's removes door from forward portal and you cant be teleported in other gamer", function()
+    game.Workspace.ForwardPortal.Door:Destroy()
+end)
+
+Section:NewButton("Water walk", "will be updated soon...", function()
+game.Workspace.WaterLevel.CanCollide = true
+                game.Workspace.WaterLevel.Size = Vector3.new(1000, 1, 1000)
+end)
+
 
 local Tab = Window:NewTab("KeyBinds")
 
