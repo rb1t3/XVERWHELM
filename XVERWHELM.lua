@@ -102,6 +102,9 @@ local Tab = Window:NewTab("2")
 
 local Section = Tab:NewSection("2.1")
 
+Section:NewButton("Run Infite Yield", "мом на боби", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+end)
 
 Section:NewButton("Small Avatar", "Makes you max small", function()
     local LocalPlayer = game:GetService("Players").LocalPlayer
