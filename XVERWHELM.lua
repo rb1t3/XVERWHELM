@@ -238,6 +238,18 @@ Section:NewButton("Teleport - Island", "Owner's spot", function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-150, 47.82349395751953, 2.3002567291259766) 
 end)
 
+Section:NewButton("Teleport - Island 2 spot", "Not so Owner's spot", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-145.9999237060547, 47.1999626159668, 23.951629638671875)
+end)
+
+Section:NewButton("Teleport - Island 3 spot", "Not so Owner's spot", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-142.99957275390625, 47.1999626159668, -19.34498405456543)
+end)
+
+Section:NewButton("Teleport - Island (Surf central map)", "Not so Owner's spot", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(69.99899291992188, 63.59996795654297, 93.43199920654297)
+end)
+
 Section:NewButton("Teleport - Leaderboard", "Owner's spot", function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-290.55047607421875, 195.3234405517578, 357.9002685546875) 
 end)
@@ -343,6 +355,18 @@ local Section = Tab:NewSection("Teleports")
 
 Section:NewKeybind("Teleport - Island", "Owner's spot", Enum.KeyCode.X, function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-150, 47.82349395751953, 2.3002567291259766)
+end)
+
+Section:NewKeybind("Teleport - Island 2 spot", "Not so Owner's spot", Enum.KeyCode.T, function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-145.9999237060547, 47.1999626159668, 23.951629638671875)
+end)
+
+Section:NewKeybind("Teleport - Island 3 spot", "Not so Owner's spot", Enum.KeyCode.H, function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-142.99957275390625, 47.1999626159668, -19.34498405456543)
+end)
+
+Section:NewKeybind("Teleport - Island (Surf central map)", "Owner's spot", Enum.KeyCode.M, function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(69.99899291992188, 63.59996795654297, 93.43199920654297)
 end)
 
 Section:NewKeybind("Teleport - Leaderboard", "Owner's spot", Enum.KeyCode.B, function()
